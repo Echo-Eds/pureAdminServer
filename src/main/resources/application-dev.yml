@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.0.2:3306/admin?useUnicode=true&characterEncoding=utf8&useSSL=true
+    username: lzy
+    password: Lzy123$%^
+  config:
+    activate:
+      on-profile: dev
+
+  ##date format
+  jackson:
+    date-format: java.text.SimpleDateFormat
+
+server:
+  port: 9090
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  #实体类扫描
+  type-aliases-package: com.li.Pojo
+
+#log
+#logging:
+#  file:
+#    name: admin.log
